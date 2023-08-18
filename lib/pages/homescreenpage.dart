@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:responsive_fltter/shared/theme.dart';
-import 'package:responsive_fltter/widgets/header.dart';
-import 'package:responsive_fltter/widgets/section1.dart';
+import '../widgets/widgets.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -16,49 +14,8 @@ class HomeScreen extends StatelessWidget {
             const Headerr(),
             Padding(
               padding: EdgeInsets.only(top: p1.maxHeight * 0.05),
-              child: Column(
-                children: [
-                  const Section1(),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Column(
-                        children: [
-                          Text(
-                            "BETTER DESIGN",
-                            style: TextStyle(
-                                fontSize: 20,
-                                color: warnaputih,
-                                fontWeight: FontWeight.bold),
-                          ),
-                          SizedBox(
-                            height: p1.maxHeight * 0.02,
-                          ),
-                          Text(
-                            "BETTER EXPERIENCES",
-                            style: TextStyle(
-                                fontSize: 20,
-                                color: warnaputih,
-                                fontWeight: FontWeight.bold),
-                          )
-                        ],
-                      ),
-                      SizedBox(
-                        width: p1.maxWidth * 0.3,
-                      ),
-                      InkWell(
-                          onTap: () {},
-                          child: Text(
-                            "DOWNLOAD CV",
-                            style: TextStyle(
-                                fontSize: 17,
-                                color: Colors.green,
-                                fontWeight: FontWeight.bold),
-                          ))
-                    ],
-                  )
-                ],
+              child: const Column(
+                children: [Section1(), CvSection()],
               ),
             )
           ],

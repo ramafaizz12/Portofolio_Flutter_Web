@@ -1,8 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:responsive_fltter/shared/theme.dart';
-import 'package:responsive_framework/responsive_row_column.dart';
-import 'package:responsive_framework/responsive_value.dart';
-import 'package:responsive_framework/responsive_wrapper.dart';
+part of 'widgets.dart';
 
 class Section1 extends StatelessWidget {
   const Section1({super.key});
@@ -14,6 +10,7 @@ class Section1 extends StatelessWidget {
       rowCrossAxisAlignment: CrossAxisAlignment.center,
       columnMainAxisAlignment: MainAxisAlignment.center,
       columnCrossAxisAlignment: CrossAxisAlignment.center,
+      columnPadding: const EdgeInsets.only(left: 13),
       rowSpacing: 60,
       columnSpacing: 30,
       layout: ResponsiveWrapper.of(context).isSmallerThan(DESKTOP)
@@ -56,24 +53,11 @@ class Section1 extends StatelessWidget {
                 ),
                 TextButton(
                     onPressed: () {},
-                    child: Text(
+                    child: const Text(
                       "Ada Project ? Let's Talk",
                       style: TextStyle(
                           fontWeight: FontWeight.w900,
-                          fontSize: ResponsiveValue(
-                            context,
-                            defaultValue: 20.0,
-                            valueWhen: const [
-                              Condition.smallerThan(
-                                name: MOBILE,
-                                value: 15.0,
-                              ),
-                              Condition.largerThan(
-                                name: TABLET,
-                                value: 20.0,
-                              )
-                            ],
-                          ).value,
+                          fontSize: 17,
                           color: Colors.white),
                     ))
               ],
@@ -82,7 +66,7 @@ class Section1 extends StatelessWidget {
         )),
         ResponsiveRowColumnItem(
             child: CircleAvatar(
-          backgroundImage: AssetImage('assets/profile.png'),
+          backgroundImage: const AssetImage('assets/profile.png'),
           radius:
               ResponsiveWrapper.of(context).isSmallerThan(DESKTOP) ? 170 : 250,
         )),

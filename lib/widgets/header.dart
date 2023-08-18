@@ -1,6 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:responsive_fltter/widgets/navbarr.dart';
-import 'package:responsive_framework/responsive_wrapper.dart';
+part of 'widgets.dart';
 
 class Headerr extends StatelessWidget {
   const Headerr({super.key});

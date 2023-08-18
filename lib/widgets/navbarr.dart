@@ -1,6 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:responsive_fltter/shared/theme.dart';
-import 'package:responsive_framework/responsive_framework.dart';
+part of 'widgets.dart';
 
 class Navbarr extends StatefulWidget {
   const Navbarr({super.key});
