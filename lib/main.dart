@@ -24,6 +24,7 @@ class MyApp extends StatelessWidget {
       ],
       child: MaterialApp(
         themeMode: ThemeMode.dark,
+        title: "Portofolio Website",
         darkTheme: Theme.of(context).copyWith(
             platform: TargetPlatform.android,
             scaffoldBackgroundColor: backgroundcolor,
